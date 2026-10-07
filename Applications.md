@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Applications and Pitfalls
+title: 5. Applications and Pitfalls
 permalink: /applications/
 ---
 #### Gait

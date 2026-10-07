@@ -21,7 +21,9 @@
 title: CS 663 Project 1 Tutorial
 email: jcupler@horizon.csueastbay.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  CSS 663 Project Tutorial
+  Computer vision often begins with a skeleton: joints, links, and a compact pose vector. 
+  That abstraction is powerful, but it does not describe the whole deformable body.
+  This tutorial examines how body shape, surface geometry, dynamic motion, depth, and spine structure can be added when the application needs them.
 baseurl: "cs663project1.github.io" # the subpath of your site, e.g. /blog
 url: "https://jcupler.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jcupler

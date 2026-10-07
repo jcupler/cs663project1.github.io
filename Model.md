@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Models 
-permalink: /model
+title: 4. Models 
+permalink: /model/
 ---
+
 An RGB image provides color and texture cues, while a depth image provides an estimate of distance for each pixel. Neither guarantees a complete body model: surfaces may be occluded, depth may be noisy, and internal anatomy is usually not directly visible.
 
 A practical pipeline combines observation with a prior. The prior may be a motion library, a parametric body model, a multi-view geometric constraint, or a biomechanics model. The strongest systems make these priors explicit so failure can be traced to sensing, registration, or model mismatch.
@@ -11,16 +12,21 @@ The projection model also matters. A perspective camera maps 3D points to image 
 
 With calibrated cameras, corresponding observations can be triangulated or fused into a point cloud. Multiple views reduce single-view ambiguity and reveal surfaces hidden from one camera, although self-occlusion and calibration errors still matter.
 
+---
+#### Single-camera Reconstruction
+---
 Ye et al. demonstrate a single-depth strategy that first matches a noisy depth map to pre-captured motion exemplars. The match proposes a body configuration and semantic point-cloud labels; a refinement stage then fits the configuration directly to the observation.
 
 ```text
 input depth → denoise → exemplar retrieval → pose + labels → geometric refinement
 ```
-
 Single-view RGB methods can also predict depth or 3D pose from learned priors, but their output is more dependent on training distribution. Fewer sensors simplify capture, while stronger priors carry more responsibility for resolving ambiguity.
 
 The retrieve-then-refine design is useful beyond this specific paper. Retrieval supplies a basin of attraction for nonlinear optimization, while geometric fitting adapts the candidate to the actual frame. Robust losses are important because depth maps contain outliers around silhouettes and occlusions. An unseen pose may still be forced toward the nearest available exemplar.
 
+---
+#### Multi-camera Reconstruction
+---
 
 Sastry and Zhou discuss multi-camera reconstruction systems such as DynamicFusion and DoubleFusion as examples of using multiple cameras to build fuller body representations.
 

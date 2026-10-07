@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Background
+title: 1. Background
 permalink: /background/
 ---
 Computer vision systems observe projections, depth samples, or silhouettes and infer a latent body state. The simplest latent state is a skeleton: a graph of joints with estimated positions or rotations. More expressive states add a body surface, shape parameters, temporal dynamics, or internal landmarks.

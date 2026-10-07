@@ -1,6 +1,6 @@
 ---
 layout: page
-title: On Skeletons and their Limitations
+title: 2. On Skeletons and their Limitations
 permalink: /skeletons/
 ---
 Skeleton methods estimate a fixed or semi-fixed set of landmarks and connect them through a kinematic tree or graph. Their outputs are compact, easy to compare across frames, and compatible with action recognition, pose classification, robot control, and animation retargeting.
